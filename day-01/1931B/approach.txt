@@ -1,0 +1,51 @@
+URL: https://codeforces.com/problemset/problem/1913/B
+
+
+
+
+
+
+
+GOOD STRING
+
+if  original string = abcd
+and output string   = pqrs
+
+then  a != p
+      b != q
+      c != r
+      d != s
+
+
+
+
+
+OPERATION & COST
+
+delete a character : 1 coin
+swap two character : 0 coin
+
+
+
+
+APPROACH:
+Greedy + Two-Pointer
+
+=> copy the input into output string
+
+=> keep track of indexes with two arrays
+    indexOfAllZero   (save all indexes of all zero from start to end of an input)
+    indexOfAllOne    (save all indexes of all one from start to end of an input)
+
+=> first perform possible swaps:    the index that was 0 becomes 1
+                                    the index that was 1 becomes 0
+    because we can swap without coins
+
+=> get a cost variable: initially 0
+
+=> check for unswapped
+    for each upswapped position, increment cost.
+        when indexes match  :   move only output-pointer + increment cost
+        otherwise           :   move both input and outpout pointer
+
+=> print cost
