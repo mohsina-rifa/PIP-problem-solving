@@ -1,0 +1,50 @@
+URL: https://codeforces.com/problemset/problem/1857/C
+
+
+
+
+
+
+
+ARRAYS
+
+old array : size = n
+new array : size = n
+
+example :   old_array = a, b, c, d
+            new_array = min(a,b), min(a,c), min(a,d)
+                        min(b,c), min(b,d), min(c,d)
+
+
+
+
+PATTERN DETECTED
+
+smallest element        :repeats n-1 times
+second smallest element :repeats n-2 times
+third smallest element  :repeats n-3 times
+------------------------------------------
+
+
+
+
+
+APPROACH:
+
+=> find the value of (n*(n-1)/2)
+    to take array input
+
+=> sort the array
+    for systematic identification
+
+=> keep each unique element 
+    because they were the smaller one
+    from the pairs of original array
+
+=> use the pattern to loop:
+    first iteration     :   jump n-1 blocks
+    second iteration    :   jump n-2 blocks
+    ---------------------------------------
+
+=> last element = max element + 1
+        if necessary
