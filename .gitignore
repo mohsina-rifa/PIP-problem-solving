@@ -1,5 +1,10 @@
+# input files
+input.txt
+
 # template file
 template.ts
+
+# compiled output
 *.js
 
 # dependencies

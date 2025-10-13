@@ -8,7 +8,7 @@ const readline = (): string => {
 };
 
 const solve = (): void => {
-  const s = readline().trim(); // Add trim() here
+  const s = readline().trim();
 
   const indexOfAllZero: number[] = [];
   const indexOfAllOne: number[] = [];
@@ -45,7 +45,11 @@ const solve = (): void => {
 };
 
 const main = (): void => {
-  input = fs.readFileSync(0, "utf8").trim().split("\n").map(line => line.trim());
+  input = fs
+    .readFileSync(0, "utf8")
+    .trim()
+    .split("\n")
+    .map((line) => line.trim());
   const testcases: number = parseInt(readline());
 
   let loop = testcases;
