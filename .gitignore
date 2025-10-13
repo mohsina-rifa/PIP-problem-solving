@@ -1,6 +1,6 @@
-# text files
+# template file
 template.ts
-approach.txt
+*.js
 
 # dependencies
 node_modules
