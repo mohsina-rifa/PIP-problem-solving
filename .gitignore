@@ -1,1 +1,6 @@
-template.txt
+# text files
+template.ts
+approach.txt
+
+# dependencies
+node_modules
