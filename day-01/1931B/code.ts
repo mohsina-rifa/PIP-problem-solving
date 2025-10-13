@@ -8,7 +8,7 @@ const readline = (): string => {
 };
 
 const solve = (): void => {
-  const s = readline();
+  const s = readline().trim(); // Add trim() here
 
   const indexOfAllZero: number[] = [];
   const indexOfAllOne: number[] = [];
@@ -31,12 +31,13 @@ const solve = (): void => {
   }
 
   let cost = 0;
+  let point = 0;
 
-  for (let i = 0, j = 0; i < t.length; i++) {
-    if (t[i] === s[j]) {
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] === s[point]) {
       cost++;
     } else {
-      j++;
+      point++;
     }
   }
 
@@ -44,7 +45,7 @@ const solve = (): void => {
 };
 
 const main = (): void => {
-  input = fs.readFileSync("input.txt", "utf8").trim().split("\n");
+  input = fs.readFileSync(0, "utf8").trim().split("\n").map(line => line.trim());
   const testcases: number = parseInt(readline());
 
   let loop = testcases;
