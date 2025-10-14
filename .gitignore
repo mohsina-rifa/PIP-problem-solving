@@ -1,3 +1,9 @@
+# dependencies
+node_modules/
+
+# sample dir
+sample/
+
 # input files
 input.txt
 
@@ -6,6 +12,3 @@ template.ts
 
 # compiled output
 *.js
-
-# dependencies
-node_modules
