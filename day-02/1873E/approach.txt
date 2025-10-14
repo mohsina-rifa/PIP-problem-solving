@@ -1,0 +1,46 @@
+URL: https://codeforces.com/problemset/problem/1913/B
+difficulty level : 1100
+
+
+
+
+
+
+
+STATEMENT
+
+base            = no. of elements
+maximum water   = x units
+
+height          = biggest possible
+
+
+
+
+
+APPROACH:
+Binary search
+
+=> sort array
+    for binary search
+
+=> set values for binary-search:
+    left    smallest array-element
+    right   biggest array-element
+
+=> minimum height: smallest array-element
+
+=> get a cost variable: initially 0
+
+=> binary-search : until left <= right
+    find mid
+    calculate required amount of water for current step
+        initially 0
+    check for all elements:
+        update required :   add (mid - current-element)
+            only if current-element smaller than mid
+        update height requirement:
+            required > maximum  :   move right to left  (mid-1)
+            otherwise           :   move left to right  (mid+1)     :   update height
+
+=> print height
