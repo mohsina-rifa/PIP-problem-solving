@@ -1,0 +1,47 @@
+URL: https://codeforces.com/problemset/problem/1913/B
+difficulty level : 1300
+
+
+
+
+
+
+
+COMMANDS:
+
++   :   positive direction
+-   :   negative direction
+    probability for each is 0.5
+
+
+
+
+APPROACH:
+Bitmasking
+
+=> initial required-position 0
+
+=> first analyze Drazil's string
+        if +   :   increment required-position
+        else   :   decrement required-position
+
+=> then analyze receieved string
+        top priority    : find no. of ?     : possible outcome = 2^n
+
+=> keep a counter   :   initially 0
+
+=> apply Bitmasking
+        generate all possible combination
+        keep    temporary-position          : initially 0
+                current-unknown position    : initially 0
+        
+        loop through receieved string to process ?
+            if ? found  :   check the current position bit of the mask
+            otherwise   :   if +   :   increment temporary-position
+                            else   :   decrement temporary-position
+        
+        if temporary-position matches required-position     : increment counter
+
+                         counter-value
+=> probability  =   ------------------------    : print
+                        possible-outcome
