@@ -2,7 +2,7 @@ URL: https://codeforces.com/problemset/problem/1873/E
 
 
 
-date: Tue 14-10-2025
+date: Mon 13-10-2025
 difficulty level : 1100
 
 
