@@ -1,0 +1,38 @@
+URL: https://codeforces.com/problemset/problem/1883/C
+
+
+
+date: Wed 15-10-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+OPERATIONS
+
+choose an index
+replace value with value of next index
+
+
+
+
+
+APPROACH:
+Greedy = Number-Theory
+
+=> initialize a variable to store the minimum-moves needed to a large values
+        and a counter with 0    :   to be used for k=4
+
+=> loop through each array-element.
+    k=4 case    :   if current array-element is even    :   increment even_count
+    otherwise   :   moves needed to make smallest array-element the next multiple of k 
+                        =>  ((k-(arr[i]%k))%k)
+                    minimum-moves = min(minimum-moves, moves-needed)
+    if current-element is even   :   increment even-count
+
+=> k=4 case :   calculate the cost of getting two even numbers and compare
+
+=> print minimum numbers
