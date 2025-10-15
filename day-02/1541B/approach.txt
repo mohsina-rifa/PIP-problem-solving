@@ -1,0 +1,35 @@
+URL: https://codeforces.com/problemset/problem/1541/B
+
+
+
+date: Tue 14-10-2025
+difficulty level : 1200
+
+
+
+
+
+
+
+GOOD PAIR:
+
+i < j 
+arr[i] × arr[j] = i + j 
+
+
+
+
+APPROACH:
+Brute-force+Pruning
+
+=> map position with input      :       mp[value] = position
+
+=> limit = 2*n-1;
+
+=> sort
+
+=> keep a counter   :   initially 0
+
+=> loop:
+        product > limit                 :       early termination
+        product= good-pair constraint   :       increment count
