@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/1669/F
+
+
+
+date: Thu 16-10-2025
+difficulty level : 1100
+
+
+
+
+
+
+
+RULE:
+
+Alice eats candies from the left side   :   1, 2, 3, ...
+Bob eats candies from the right side    :   n, n-1, n-2, ...
+
+
+
+
+APPROACH:
+Prefix-Suffix sum + Two-pointer
+
+=> find sum
+    prefixsum[i] = total weight of candies from position 0 to i     :   Alice
+    suffixsum[j] = total weight of candies from position j to n-1   :   Bob
+
+=> three cases:
+    prefixsum[i] = suffixsum[j]   :   candies = (i+1) + (n-j)
+                                      move both pointers
+    prefixsum[i] < suffixsum[j]   :   move alice-pointer
+    prefixsum[i] > suffixsum[j]   :   move bob-pointer
