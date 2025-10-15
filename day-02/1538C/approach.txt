@@ -1,0 +1,31 @@
+URL: https://codeforces.com/problemset/problem/1538/C
+difficulty level : 1300
+
+
+
+
+
+
+
+REQUIRED:
+
+pairs(i,j)            :   1 <= i < j <= n
+array[i] + array[j]   :   l <= array[i]+array[j] <= r
+
+
+
+
+APPROACH:
+Two-pointer + inclusion-exclusion
+
+=> sort
+
+=> define helper function   :   to count the number of pairs
+      counter is initialized to 0. 
+      Two pointers  : left and right  : initialized with first and last elements
+      continues     : till left pointer < the right pointer.
+                      checks sum      : if a[left] + a[right] <= value  : add right-left to counter
+      called with the upper bound     : number of pairs whose sum is less than or equal to r.
+      called with l - 1               : number of pairs whose sum is less than l.
+
+=> print (Number of pairs with sum ≤ r) - (Number of pairs with sum ≤ l-1)
