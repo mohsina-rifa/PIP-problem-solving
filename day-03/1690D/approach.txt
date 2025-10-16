@@ -1,0 +1,36 @@
+URL: https://codeforces.com/problemset/problem/1690/D
+difficulty level : 1000
+
+
+
+
+
+
+
+OPERATION:
+
+re-color  : W ==> B
+
+
+
+
+
+TASK:
+
+consecutive black cells   : length = k
+
+
+
+
+APPROACH:
+Sliding-Window
+
+=> count 'W'  : withinin the first k characters
+    minimum-whites  : initialize with count.
+
+=> move k-length window   :   one position at a time
+    decrement whites  :   if the outgoing char is 'W'
+    increment         :   if the incoming char is 'W'
+      track the minimum whites seen.
+
+=> print minimum-count
