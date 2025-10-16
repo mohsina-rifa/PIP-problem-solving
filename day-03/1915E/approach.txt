@@ -1,0 +1,50 @@
+URL: https://codeforces.com/problemset/problem/1915/E
+difficulty level : 1300
+
+
+
+
+
+
+
+SENARIO:
+
+i-th glass  : array[i] unit juice
+drinks from : Lucia     : odd indexed glasses
+                            1, 3, 5 ... 2n-3, 2n-1
+              her date  : even indexed glasses
+                            2, 4, 6 ... 2n-2, 2n
+         
+         
+         
+         
+                            
+TASK:
+
+find sub-array  : sum of even-index = sum of odd-index
+
+
+
+
+
+APPROACH:
+Alternating Prefix-Sum + Hashing
+
+=> Map    :   record seen prefix sums
+
+=> variable  temporary-sum   :   initialize with 0; 
+
+=> count = 1  : for sum = 0.
+
+=> loop   :   form alternating prefix
+                check for repeated sum
+      update sign-adjusted value  :   element of current index * (+1 for even i, −1 for odd i), 
+                                          positive  : for even
+                                          negative  : for odd
+      
+      
+      if current sum was seen before  : print YES
+                                        stop execution
+      otherwise                       : increment count for current-sum in map
+
+=> nothing printed after loop?  :   print NO
