@@ -1,0 +1,32 @@
+URL: https://codeforces.com/problemset/problem/2146/B
+difficulty level : 1100
+
+
+
+
+
+
+
+STATEMENT:
+
+new-set   :   1 to m
+              at least once
+                more than once? === doesn't matter
+three such sets must exist
+
+
+
+
+APPROACH:
+frequency-count + scan-heuristic
+
+=> map    :   how many sets each number appears in
+
+=> check each sets  : every element appears in at least two different input sets?
+                        YES   :   increment counter
+
+=> verify map   : each value (1-m) exists?
+                    NO    :   counter reset to 0
+
+=> counter >=2    : print YES
+    otherwise     : print NO
