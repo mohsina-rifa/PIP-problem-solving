@@ -1,0 +1,35 @@
+URL: https://codeforces.com/problemset/problem/2149/D
+difficulty level : 1200
+
+
+
+
+
+
+
+OPERATION:
+
+choose i  : swap elements : idex i and i+1
+
+
+
+
+
+GOAL:
+make it all 'a' together and all 'b' together?
+  which letter first? ===> doesn't matter
+find minimum no. of operation to do it
+
+
+
+
+APPROACH:
+Median-Based Grouping
+
+=> Helper function  :   for operation
+    collect positions of characters
+      + handle empty case   :   no swaps needed
+    central anchor  :   median occurrence index
+      calculate absolute distance   : current-position to target-position
+
+=> calculate with helper function   : for both a and b
