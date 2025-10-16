@@ -1,0 +1,42 @@
+URL: https://codeforces.com/problemset/problem/1324/D
+
+
+
+date: Wed 15-10-2025
+difficulty level : 1400
+
+
+
+
+
+
+
+INTERESTING PAIR
+
+teacher-array[i]+teacher-array[j]   >   student-array[i]+student-array[j]
+
+
+
+
+APPROACH:
+Binary-Search
+
+=> difference-array   :   drr[i] = arr[i] - brr[i]
+    to simplify the problem   :   from  : arr[i]+arr[j] > brr[i]+brr[j]
+                                  to    : drr[i] + drr[j] > 0
+
+=> dort the difference-array
+
+=> loop:
+    for each drr[i] : find partner  : j > i
+                                      drr[j] > -drr[i]
+
+=> binary search on the rest of the array
+
+=> first valid partner found
+    all elements after the current index  === valid partners
+    because the array is sorted
+
+=> increment counter with (n - current-index)
+
+=> print counter
