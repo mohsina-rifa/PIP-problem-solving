@@ -1,0 +1,32 @@
+URL: https://codeforces.com/problemset/problem/1514/B
+difficulty level : 1200
+
+
+
+
+
+
+
+CONDITIONS:
+
+elements:integers       : 0 to 2^k−1
+bitwise-AND of elements : 0
+sum of elements         : largest possible
+
+
+
+
+
+APPROACH:
+modular exponentiation + binary exponentiation
+
+=> base : n MOD 1000000007    <------------------------
+                  largest prime in range              |
+                                                      |
+=> loop until exp > 0:                                |
+      when AND operation equals 1:                    |
+            update ans  :     multiply with base      |
+                              them MOD again  ---------
+      increment base    :     with square
+      decrement exp     :     into half
+                    
