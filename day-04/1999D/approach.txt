@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/1999/D
+difficulty level : 1100
+
+
+
+
+
+
+
+TASK:
+
+replace '?' with letters    :   make string-2 substring of string-1
+                                    continuous?   :   not required
+
+
+
+
+APPROACH:
+Greedy + Two-Pointer
+
+=> convert string into an array of characters
+      easy replacement of individual '?'
+
+=> initialize two pointers    :   with 0
+
+=> loop   :   greedy-matching
+      current index = '?' :   replace with a[j]
+                                increment both pointers.
+      otherwise           :   same character in both string   :   increment both pointers
+                              otherwise                       :   increment first-pointer
+
+=> refill empty positions with any character
+      my favourite  : x
