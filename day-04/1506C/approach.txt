@@ -1,0 +1,43 @@
+URL: https://codeforces.com/problemset/problem/1506/C
+
+
+
+date: Thu 16-10-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+OPERATION:
+
+=> delete first character
+=> delete last character
+
+
+
+
+
+TASK
+
+Make string-1 equal to string-2
+    with minimum operation
+
+
+
+
+APPROACH:
+Longest-Common-Substring
+
+=> initialize answer  : length of string-1 + length of string-2
+                          worst case  : make them empty to match them
+
+=> nested-loop for both string:
+      if character equal  :   extend tracking-indices forward 
+                                while characters match
+      common middle substring   :   compute no. of deletions required
+                                    remove everything else
+                                    minimize answer
+
