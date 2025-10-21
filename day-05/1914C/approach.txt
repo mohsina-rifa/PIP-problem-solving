@@ -1,0 +1,51 @@
+URL: https://codeforces.com/problemset/problem/1914/C
+difficulty level : 1100
+
+
+
+
+
+
+
+QUEST:
+
+Q-1 :   always available
+Q-i :   when all previous quests are done.
+
+
+
+
+
+POINT
+
+Q-i :   1st completion  :   array-1[i] points
+        re-completion   :   array-2[i] points
+
+
+
+
+
+TASK
+
+maximum experience    :   by k tasks
+
+
+
+
+APPROACH:
+Greedy + Prefix-sum
+
+=> build prefix sums of array-1
+
+=> initialize tracking variables
+        running maximum of b seen so far.
+        track best total experience from auxiliary accumulator for the k > n branch.
+
+=> set new limit for the main loop:
+        consider finishing first i+1 quests, then repeat best b
+        Updated maximum
+        k exceeds n     :       accumulate all first-completion rewards 
+                                track the global max across all quests
+                                adjust max by adding (n - k) * max before comparing with max_exp.
+
+=> output result
