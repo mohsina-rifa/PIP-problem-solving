@@ -1,0 +1,40 @@
+URL: https://codeforces.com/problemset/problem/1097/B
+difficulty level : 1200
+
+
+
+
+
+
+
+OPERATION:
+
+each rotation : clockwise
+                anti-clockwise
+
+
+
+
+
+TASK:
+
+return to 0
+
+
+
+
+APPROACH:
+Bit-Manipulation
+
+=> Generate all possible direction combinations : from 0 to 2^n - 1
+      clockwise         : 1
+      counter-clockwise : 0
+
+=> current-rotation bit set in combination?
+      bit=1     : clockwise       : add
+      otherwise : anti-clockwise  : subtract
+
+=> pointer returns to zero?   : increment : break
+
+=> valid combination?   : print YES
+    otherwise           : print NO
