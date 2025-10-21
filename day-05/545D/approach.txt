@@ -1,0 +1,39 @@
+URL: https://codeforces.com/problemset/problem/545/D 
+difficulty level : 1300
+
+
+
+
+
+
+
+STATEMENT:
+
+people-i  : time = time[i]
+
+serve-time < wait-time  : unhappy
+otherwise               : happy
+
+
+
+
+
+TASK
+
+swap people to get least no. of unhappy people
+
+
+
+
+
+APPROACH:
+greedy
+
+=> Sort the service times in ascending order
+
+=>  Initialize time-tracking variables
+      cumulative waiting time
+      change counts non-disappointed people
+
+=> Iterate through sorted array:
+      if current waiting time ≤ person's service time : update cumulative time.
