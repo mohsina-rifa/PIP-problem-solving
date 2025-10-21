@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/1840/C
+
+
+
+date: Mon 20-10-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+STATEMENT:
+
+array[i]              : temparature of day-i
+
+minimum requirements  : k-days (consecutive)
+maximum temparature   : q degree
+
+no. of possible ways?
+
+
+
+
+APPROACH:
+Sliding Window
+
+=> Iterate through each day: 
+      build consecutive segment   :   ≤ q
+
+=> handle the final segment if it ends with good weather
+      if the array ends with good weather : count combinations from that final segment
