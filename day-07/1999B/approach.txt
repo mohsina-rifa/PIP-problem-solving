@@ -1,0 +1,34 @@
+URL: https://codeforces.com/problemset/problem/1999/B
+difficulty level : 1000
+
+
+
+
+
+
+
+STATEMENT:
+
+round = 2
+
+move  : choose one unflipped card
+        flip it
+
+win   : round   : player whose flipped card has strictly larger value
+        overall : player who won strictly more rounds
+
+find possible no of games won by Suneet
+
+
+
+
+APPROACH:
+Brute-Force
+
+=>  Suneet=a VS Slavic=c
+    Suneet=b VS Slavic=d        :       conditional increment
+
+=>  Suneet=a VS Slavic=c
+    Suneet=b VS Slavic=d        :       conditional increment
+    
+=>  multiply with 2 for finding pair
