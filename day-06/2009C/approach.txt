@@ -1,0 +1,37 @@
+URL: https://codeforces.com/problemset/problem/2009/C
+difficulty level : 1100
+
+
+
+
+
+
+
+STATEMENT:
+
+start:(0,0)
+
+move    :   integer d   :   0 <= d <= k
+                            d-unit forward
+
+alternet  :   move % 2  :   +x
+              otherwise :   +y
+
+
+
+
+TASK:
+
+minimum no. of moves to land on (x,y)
+
+
+
+
+APPROACH:
+Math + Greedy
+
+=> compute number of k-sized chunks needed for each coordinate
+      a   :   how many full or partial k-length moves are required along x axis
+      b   :   how many full or partial k-length moves are required along y axis
+
+=> conditionally set move to the minimal number of alternating-direction jumps needed to cover both axes.
