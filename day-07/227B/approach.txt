@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/227/B
+difficulty level : 1100
+
+
+
+
+
+
+
+STATEMENT:
+
+input     : permutation : integer 1 to n
+
+Query     : value
+            find position   :   array[position] = value
+        
+strategy  : Vasya : linear search from the beginning to the end. 
+                    position-p  : p comparisons.
+            Petya : linear search from the end of the array to the beginning
+                    position-p  : n-p+1 comparisons.
+
+
+
+
+APPROACH:
+Preprocessing + Direct-Lookup
+
+=> build position lookup with 1-based index of that value in the permutation
+
+=> query  :  value
+        lookup its position p
+        add p to Vasya
+        add (n−p+1) to Petya
