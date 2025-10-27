@@ -1,0 +1,40 @@
+URL: https://codeforces.com/problemset/problem/1526/C1
+
+
+
+date: Wed 22-10-2025
+difficulty level : 1500
+
+
+
+
+
+
+
+STATEMENT:
+
+potion-i  :   adds/subtracts health[i]
+
+start from 0  : go rightwards   : may/may not drink
+      find highest no of bottoms up
+
+
+
+
+APPROACH:
+Greedy + Max-Heap
+
+=> track    :     health as we simulate drinking
+                  how many potions are currently chosen
+                  magnitudes of negative potions that were accepted
+
+=> helper popMax  :     finds, removes, and returns the largest element in heap
+                        undefined if empty
+
+=> Iterate:
+      current potion value    :     negative    :     push its absolute value into heap
+                                                      increment answer
+                                                      add current-value to total
+
+=> drink the current potion   :     total = negative  :     remove the previously chosen negative potion
+                                                            decrement ans.
