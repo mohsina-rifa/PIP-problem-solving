@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/1409/B
+difficulty level : 1100
+
+
+
+
+
+
+
+STATEMENT:
+
+product to minimize : a , b
+lowest value        : a : x
+                      b : y
+maximum move        : n
+
+find minimum possible product of a and b
+
+
+
+
+APPROACH:
+Greedy
+
+=> decrease a as much as possible
+    decrease b for remaining moves
+      calculate product
+
+=> decrease b as much as possible
+    decrease a for remaining moves
+      calculate product
+
+=> take lowest product
