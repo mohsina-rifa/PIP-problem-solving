@@ -1,0 +1,39 @@
+URL: https://codeforces.com/problemset/problem/1985/C
+difficulty level : 1000
+
+
+
+
+
+
+
+GOOD-ARRAY:
+
+sum(some elements) = sum(other elements)
+array[0]
+
+
+
+
+TASK:
+
+no of non-empty good prefixes of the array
+
+
+
+
+APPROACH:
+Prefix-Sum
+
+=> filter length=0 first.
+
+=> initialize array for prefix sum  : 1st index
+
+=> loop: 
+      compute : cumulative sum  : up to i
+                maximum value   : up to i.
+
+=> first element = 0 : count initialized to 1 
+
+=> loop : prefix of length >1
+      sum_of_prefix - max_in_prefix === max_in_prefix : increment count
