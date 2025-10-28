@@ -1,8 +1,14 @@
+# code
+.vscode/
+
 # dependencies
 node_modules/
 
 # sample dir
 sample/
+
+# skipped dir
+skipped/
 
 # input files
 input.txt

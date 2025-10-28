@@ -2,7 +2,7 @@ URL: https://codeforces.com/problemset/problem/1883/C
 
 
 
-date: Wed 15-10-2025
+date: Tue 14-10-2025
 difficulty level : 1000
 
 
