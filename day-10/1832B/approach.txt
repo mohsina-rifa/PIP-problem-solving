@@ -1,0 +1,35 @@
+URL: https://codeforces.com/problemset/problem/1832/B
+difficulty level : 1100
+
+
+
+
+
+
+
+OPERATION:
+
+k times   :   find two minimum elements   :   delete them
+              find maximum elements       :   delete it
+
+
+
+
+
+TASK
+
+maximum possible sum
+
+
+
+
+APPROACH:
+Prefix-Sum
+
+=> sort array
+
+=> calculate prefix-sum
+
+=> loop:
+      calculate the sum of the remaining elements after each possible removal
+      updates the maximum sum found
