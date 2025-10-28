@@ -1,0 +1,36 @@
+URL: https://codeforces.com/problemset/problem/1859/B
+difficulty level : 1000
+
+
+
+
+
+
+
+MOVE:
+
+from one array to another   :   at most one integer
+
+
+
+
+BEAUTY:
+
+sum(minimum-values)   :   after move
+
+
+
+
+APPROACH:
+Greedy
+
+=> loop array:
+      reads size and elements
+      find    :   smallest element
+                  second smallest element
+
+=> sort helper arrays
+
+=> calculate the Maximum Beauty
+      initialize the answer with the smallest minimum from all arrays
+      add the second smallest values from the rest of the arrays
