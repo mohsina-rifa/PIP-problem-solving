@@ -1,0 +1,29 @@
+URL: https://codeforces.com/problemset/problem/1849/B
+difficulty level : 1000
+
+
+
+
+
+
+
+SENARIO:
+
+monster-i   :   health = array
+ability     :   choose monter with highest ability    :   does k-damage
+                                                          if multiple such monster    : choose lowest index
+health >= 0 :   monster dies
+
+
+
+
+APPROACH:
+Sorting
+
+=> for each monster     :   store a tuple of [rem, -i]
+      calculate the remainder of health when divided by k. 
+    if remainder = 0    :   set it to k. S for each monster.
+
+=> sort the array of [rem, -i] pairs
+      1.  by rem    :   ascending   :   higher remainder == survive longer
+      2.  by index  :   descending  :   ties are broken by the smallest index
