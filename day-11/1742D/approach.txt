@@ -1,0 +1,23 @@
+URL: https://codeforces.com/problemset/problem/1742/D
+difficulty level : 1100
+
+
+
+
+
+
+
+TASK
+
+max-sum(pair(i,j))  :   array[i] and array[j] are coprime
+
+
+
+
+APPROACH:
+Brute-Force
+
+=> initialize an array to store the maximum index for each possible value to quickly look up the last occurrence
+
+=> check all pairs of values    :   if co-prime   :   update the maximum sum of their indices
+                                    otherwise     :   pass
