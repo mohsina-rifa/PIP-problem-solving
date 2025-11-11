@@ -1,0 +1,53 @@
+URL: https://codeforces.com/problemset/problem/CCCC/X
+
+
+
+date: Thu 06-12-2025
+difficulty level : 900
+
+
+
+
+
+
+
+MOVE:
+
+one minute    :   run to other side   :   point += 1
+                  stay in place       :   point += 0
+
+
+
+
+
+
+TASK:
+
+run     :   until m-th minute
+audio   :   n-times
+            a[i]-th minute    :   b[i]-th side
+
+maximum point = ?
+
+
+
+
+APPROACH:
+Greedy
+
+=> initialize state variables
+      pt        :   track the maximum points earned
+      px & py   :   keep track of Farmer John's position
+
+=> loop requirement:
+    read    :   minute (x)
+                required side (y).
+                
+    increment no. of minutes since last requirement
+    
+    if John can reach   :   continue
+    otherwise           :   decrement
+    
+    update current time and side
+    
+    if minutes left after the last requirement    :   add those to the point total
