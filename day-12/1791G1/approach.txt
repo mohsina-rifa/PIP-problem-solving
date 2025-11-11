@@ -1,0 +1,47 @@
+URL: https://codeforces.com/problemset/problem/1791/G1
+
+
+
+date: Tue 28-10-2025
+difficulty level : 1100
+
+
+
+
+
+
+
+MOVE:
+
+left      :   1 coin
+right     :   1 coin
+teleport  :   array[i] coins
+
+
+
+
+
+TASK
+
+total coin  :   c
+max no of teleport?
+
+
+
+
+APPROACH:
+Greedy
+
+=> calculate total cost for each teleporter:
+        cost to reach position i from 0
+        +   cost to use the teleporter
+
+=> sort costs in ascending order
+
+=> use the cheapest available options to maximize the number of teleporters
+
+=> iterate cost:
+        if enough coins remain  :   use the teleporter
+                                    subtract its cost from total
+        increments answer for each successful use
+        stop when insufficient for next teleporter
