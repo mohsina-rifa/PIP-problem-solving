@@ -1,0 +1,42 @@
+URL: https://codeforces.com/problemset/problem/2149/C
+
+
+
+date: Thu 06-12-2025
+difficulty level : 900
+
+
+
+
+
+
+
+OPERATION:
+
+choose index    :   replace array[index] with x
+                    x = [0, n]
+
+
+
+
+
+TASK:
+
+min. no. of operation that satisfies  :   MEX(a)^∗ = k
+
+
+
+
+APPROACH:
+Greedy
+
+=> count frequency
+
+=> count missing mumbers below k
+      all numbers from 0 to k-1 must be present
+      each missing number requires one operation to insert
+
+=> console the minimum operation
+      if k not present  :   output the number of missing numbers below k
+      otherwise         :   count is at least as large as ans   :   output a[k]
+                            otherwise                           :   output ans
