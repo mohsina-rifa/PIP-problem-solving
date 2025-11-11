@@ -1,0 +1,35 @@
+URL: https://codeforces.com/problemset/problem/1742/E
+
+
+
+date: Wed 27-10-2025
+difficulty level : 1200
+
+
+
+
+
+
+
+CONDITION:
+
+climb   :   when leg <= height
+
+
+
+
+
+APPROACH:
+Prefix-Sum + Binary-Search
+
+=> build prefix-sum & max-height
+          update    :   running sum of heights
+                        maximum step height so far
+          store pairs of [max, sum] in vector
+
+=> sort the array vec by the maximum step height
+
+=> build prefix-max for sum
+          update each entry in vector   :   sum value = maximum possible sum up to that point
+
+=> answer query   :   binary search
