@@ -1,0 +1,27 @@
+URL: https://codeforces.com/problemset/problem/2140/B
+
+
+
+date: Fri 07-12-2025
+difficulty level : 900
+
+
+
+
+
+
+
+GAME:
+
+Alice   : (+)ve integer
+Bob     : another (+)ve integer   :    x#y % (x + y) = 0
+
+
+
+
+APPROACH:
+Math
+
+=> choose a value for y based on the parity of x:
+      for even    :   y = x / 2.
+      for odd     :   y = x * 2.
