@@ -1,0 +1,43 @@
+URL: https://codeforces.com/problemset/problem/1285/B
+
+
+
+date: Tue 28-10-2025
+difficulty level : 1300
+
+
+
+
+
+
+
+MOVES:
+
+Yasser  :   one of each type
+Adel    :   choose a segment != whole array
+            one of each type from that segment
+
+
+
+
+
+TASK:
+
+if happiness(Yasser) > happiness(Adel)  :   YES
+otherwise                               :   NO
+
+
+
+
+APPROACH:
+Kadane's algorithm
+
+=> calculate total tastiness for Yasser   :   distinct elements
+
+=> find maximum subarray sum for prefix
+        from the first element, exclude last element
+
+=> find maximum subarray sum for
+        from the second element to the last, exclude first element
+                                  
+=> compare Yasser’s total with Adel’s best possible segment
