@@ -1,0 +1,32 @@
+URL: https://codeforces.com/problemset/problem/1883/B
+
+
+
+date: Thu 06-12-2025
+difficulty level : 900
+
+
+
+
+
+
+
+TASK:
+
+make string pallindrome   :   remove k letters
+                              reorder in any way
+
+
+
+
+APPROACH:
+Frequency-Counting + Parity-Check
+
+=> count char frequency
+
+=> count odd char frequency
+      middle position may have a single unique character
+      
+=> check Palindrome possibility after removals
+      if no. of odd-frequency char > k + 1  :   print "NO"
+      otherwise                             :   print "YES".
