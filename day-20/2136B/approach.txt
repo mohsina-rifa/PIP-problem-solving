@@ -1,0 +1,28 @@
+URL: https://codeforces.com/problemset/problem/2136/B
+difficulty level : 900
+
+
+
+
+
+
+
+TASK:
+
+permutation   :   position-i = 1
+                  length([l, r]) = k    :   max element can't be at i
+
+
+
+
+APPROACH:
+Greedy
+
+=> check for invalid intervals
+      group consecutive '1's
+      for each group    :   if length is at least k   :   print "NO" and exit.
+                            otherwise                 :   print "YES" 
+
+=> for each position:
+      if s[i] is '1'    :   assign increasing numbers starting from 1
+      otherwise         :   assign increasing numbers starting from the count of '1's
