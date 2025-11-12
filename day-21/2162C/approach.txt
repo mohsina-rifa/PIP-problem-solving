@@ -1,0 +1,28 @@
+URL: https://codeforces.com/problemset/problem/2162/C
+difficulty level : 1100
+
+
+
+
+
+
+
+OPERATION:
+
+choose integer    :   0 <= int <= a
+set a = a XOR x   :   make a == b
+
+
+
+
+APPROACH:
+Bit-Manipulation
+
+=> find smallest power of 2   :   >n
+
+=> check possible transformation  :   2^k <= m
+
+=> possible   :   output 2
+                  output two values : (k - 1) ^ n
+                                      (k - 1) ^ m.
+
