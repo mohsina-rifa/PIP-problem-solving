@@ -1,0 +1,35 @@
+URL: https://codeforces.com/problemset/problem/2114/B
+difficulty level : 900
+
+
+
+
+
+
+
+GOOD PAIR:
+
+pair(i, n−i+1)  :   1 <= i < n−i+1
+                    s[i] = s[n−i+1]
+
+
+
+
+
+MOVE:
+
+rearrange   :   good pair = k
+
+
+
+
+
+APPROACH:
+Greedy
+
+=>  count char  :   0 and 1
+
+=> calculate pairs and bad pairs
+
+=> check    :   if enough 0s and 1s to form the required number of bad pairs
+                if the remaining can be evenly split into good pairs.
