@@ -1,0 +1,25 @@
+URL: https://codeforces.com/problemset/problem/2162/B
+difficulty level : 1000
+
+
+
+
+
+
+
+TASK:
+
+subsequence-p   :   non-decreasing
+                    pallindrome
+
+
+
+
+APPROACH:
+Linear-Scan
+
+=> initialize counter and storage
+
+=> find all 1s and their positions
+        1 found   :   incremente count
+                      store index
