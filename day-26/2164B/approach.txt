@@ -1,0 +1,36 @@
+URL: https://codeforces.com/problemset/problem/2164/B
+
+
+
+date: Mon 17-11-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+TASK:
+
+Find x, y   :   x != y
+                x < y
+                (y % x) % 2 = 0
+No suck pair:   print -1
+
+
+
+
+APPROACH:
+Brute-Force
+
+=> initialize   :   boolean found   :   mark when a valid pair is discovered
+                    integer x, y    :   sentinel values
+
+=> nested loops :   iterate   :   i from 1..n-1   :   extract   :   xi = a[j]
+                                  j from 0..i-1                     yi = a[i]
+                                                      compute yi % xi   :   if true   :   assign xi, yi to x, y
+                                                                                          set found = true
+
+=> output when found
+    otherwise -1
