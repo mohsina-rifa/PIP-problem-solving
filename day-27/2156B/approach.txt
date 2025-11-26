@@ -1,0 +1,33 @@
+URL: https://codeforces.com/problemset/problem/2156/B
+
+
+
+date: Tue 25-11-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+Machines:
+
+A   :   x := x − 1
+B   :   x := | x / 2 |
+
+
+
+
+APPROACH:
+Brute Force
+
+=> ount no of machines of type 'B'
+
+=> iterate
+      take its initial value  : if no 'B'                   : print current-value
+      current_val > 0         : iterate through the machine : increment answer
+                                                              apply machine's update  : A : decrement by 1
+                                                                                        B: floor divide by 2
+                                                              current-value = 0       : break the inner loop
+=> print the accumulated answer
