@@ -1,0 +1,39 @@
+URL: https://codeforces.com/problemset/problem/1941/C
+
+
+
+date: Tue 25-11-2025
+difficulty level : 900
+
+
+
+
+
+
+
+UGLY:
+
+contains substrings   :   pie
+                          map
+
+
+
+
+
+OPERATION:
+
+one move  :   delete one character
+
+
+
+
+APPROACH:
+Greedy + Sliding-Window
+
+=> initialize   :   pointer i       :   scan the string and
+                    counter count   :   accumulate the number of deletions
+
+=> loop   :   while at least three characters remain
+      extract the current length-3 segment    :   if "map" or "pie"   :   increment count
+                                                                          advance by 3 positions
+                                                  otherwise           :   continue loop
