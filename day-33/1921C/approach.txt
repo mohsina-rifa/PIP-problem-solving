@@ -1,0 +1,49 @@
+URL: https://codeforces.com/problemset/problem/1921/C
+
+
+
+date: Wed 26-11-2025
+difficulty level : 900
+
+
+
+
+
+
+
+STATEMENT:
+
+must send   :   n messages    :   at strictly increasing integer times
+
+initial               :   f units of charge
+one unit time         :   f--
+turn on or turn off   :   b units of charge
+
+may toggle and send a message at the same moment
+
+
+
+
+
+TASK
+
+schedule on/off toggles   :   without recharging
+                              the phone must be on at every mi
+                              charge never drops to <= 0
+
+
+
+
+APPROACH:
+Greedy
+
+=> initialize   :   previous = 0    :   phone initial condition
+                    ok = true       :   confirm possibility
+
+=> iterate
+      compute time gap    :   current message to previous moment
+      compute energy consumed   :   phone stayed on through the gap   :   if less than b    :   consider energy
+                                                                          otherwise         :   consider b
+      deduct the chosen cost from the remaining charge    :   if less than or equal zero    :   break
+
+=> print "YES" or "NO" accordingly
