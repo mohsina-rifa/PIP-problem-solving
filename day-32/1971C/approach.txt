@@ -1,0 +1,32 @@
+URL: https://codeforces.com/problemset/problem/1971/C
+
+
+
+date: Tue 25-11-2025
+difficulty level : 900
+
+
+
+
+
+
+
+STATEMENT:
+
+clock line    :   within two (of twelve) points
+intersect?
+
+
+
+
+APPROACH:
+Geometry + Cyclic Order
+
+=> initialize   :   string s    :   record the order of the four special points
+
+=> iterate      :   clockwise
+      if encounter endpoints of first chord   :   append 'a'
+      if encounter endpoints of second chord  :   append 'b'
+
+=> if recorded sequence is alternating    :   print "YES"
+    otherwise                             :   print "NO".
