@@ -1,0 +1,46 @@
+URL: https://codeforces.com/problemset/problem/2060/C
+
+
+
+date: Wed 26-11-2025
+difficulty level : 900
+
+
+
+
+
+
+
+GAME:
+
+Alice removes   :   integer-a
+Bob removes     :   integer-b
+
+if sum = k      :   score++
+
+
+
+
+
+STRATEGY
+
+Alice   :   minimize score
+Bob     :   maximize score
+
+
+
+
+APPROACH:
+Two-Pointer
+
+=> sort array in non-decreasing order.
+
+=> initialize   :   two indices   :   left
+                                      right
+                    score counter
+
+=> iterate
+      compute sum at two pointers   :   if equal to k       :   count the pair
+                                                                move both pointers
+                                        if sum too small    :   increment left    :   increase sum
+                                        if sum too large    :   decrement right   :   decrease sum
