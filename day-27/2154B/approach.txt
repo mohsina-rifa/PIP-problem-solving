@@ -1,0 +1,64 @@
+URL: https://codeforces.com/problemset/problem/2154/B
+
+
+
+date: Tue 18-11-2025
+difficulty level : 1000
+
+
+
+
+
+
+
+AWESOME-ARRAY:
+
+odd index   :   array[index] < array[index+1]
+even index  :   array[index] > array[index+1]
+
+
+
+
+
+OPERATION:
+
+1. select integer-i   :   ai := max(a1,…,ai)
+2. select integer-i   :   ai := ai - 1
+
+
+
+
+APPROACH:
+Greedy + Prefix-Max
+
+=> Initialized maxn to track the prefix maximum and cnt to accumulate the number of decrements (operation 2).
+Why:
+maxn is used to simulate free prefix-max increases (operation 1). cnt is the required answer.
+Lines:
+
+What was done:
+
+Walked the array left to right, updating the running maximum. For every even index i, if v[i] is less than the prefix maximum, set v[i] to that maximum.
+Why:
+Operation 1 (prefix max) can be used freely to increase elements. Making even positions as large as the prefix maximum helps them become peaks (b2, b4, ... should be greater than neighbors) without costing decrements.
+Lines:
+
+What was done:
+
+Iterate over odd indices (1, 3, 5, ...).
+Why:
+In the target pattern b1 < b2 > b3 < b4 > ..., odd positions are the valleys that must be strictly less than both neighbors, so those are the positions we adjust by decrements.
+Lines:
+
+What was done:
+
+If an odd element equals its right neighbor, decrement it by 1 and count one decrement.
+Why:
+The relation must be strict (v[i] < v[i+1]); when equal, one decrement fixes the immediate strictness. This is done first because equality with the right neighbor is a simple 1-step fix.
+Lines:
+
+What was done:
+
+If the odd element is not strictly less than its left neighbor, accumulate the number of decrements needed to reduce v[i] to v[i-1]-1.
+Why:
+To satisfy v[i] < v[i-1] (left neighbor is an even peak that was possibly raised), we must lower v[i] to at least v[i-1]-1. The formula v[i] - (v[i-1]-1) = v[i] - v[i-1] + 1 gives the required decrement count. These decrements are counted (operation 2); the code does not explicitly change v[i] further because only the total count matters.
