@@ -1,0 +1,26 @@
+URL: https://codeforces.com/problemset/problem/1873/C
+difficulty level : 800
+
+
+
+
+
+
+
+GRID:
+
+dimension   :   10x10
+point-value :   out-to-in   :   1 to 5
+
+
+
+
+APPROACH:
+Brute-Force
+
+=> declare 10×10 ring matrix
+
+=> initialize accumulator sum
+
+=> iterate    :   row-column
+      if character = 'X'    :   sum += ring[i][j]
